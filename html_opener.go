@@ -55,7 +55,7 @@ func openBrowser(urlOrFilePath string) error {
 	case "linux":
 		return exec.Command("xdg-open", urlOrFilePath).Run()
 	case "windows":
-		return exec.Command("rundll32", "urlOrFilePath.dll,FileProtocolHandler", urlOrFilePath).Run()
+		return exec.Command("rundll32", "url.dll,FileProtocolHandler", urlOrFilePath).Run()
 	case "darwin":
 		return exec.Command("open", urlOrFilePath).Run()
 	default:
