@@ -66,9 +66,9 @@ func openBrowser(urlOrFilePath string) error {
 func determineFilePath() string {
 	switch runtime.GOOS {
 	case "linux", "darwin":
-		return "/tmp/paypal.html"
+		return "/tmp/website.html"
 	case "windows":
-		return "C:\\tmp\\paypal.html"
+		return "C:\\tmp\\website.html"
 	default:
 		return ""
 	}
